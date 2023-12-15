@@ -1,7 +1,10 @@
 #!/usr/bin/env bash
 
-# bind-key -r g run-shell 'tmux neww -n "git commit" "SESSION=$(tmux display-message -p "#S") PANE=$(tmux display-message -p "#P") WINDOW=$(tmux display-message -p "#I") ./commit-ch-tmux.sh $SESSION $PANE $WINDOW"'
-#
-#
-#
-bind-key -r g run-shell '~/.tmux/plugins/commit-ch-tmux/commit-ch-tmux.sh 2> ~/.tmux/plugins/commit-ch-tmux/error.log'
+CURRENT_DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
+SESSION="$(tmux display-message -p '#S')"
+PANE="$(tmux display-message -p '#P')"
+WINDOW="$(tmux display-message -p '#I')"
+
+tmux bind-key -r g run-shell "tmux neww -n 'git commit'  $CURRENT_DIR/commit-ch-tmux.sh '#{session_id}' '#{pane_id}' '#{window_id}' 'message'"
+
+tmux bind-key -r G run-shell "tmux neww -n 'git commit'  $CURRENT_DIR/commit-ch-tmux.sh '#{session_id}' '#{pane_id}' '#{window_id}' 'full'"
