@@ -1,8 +1,16 @@
 #!/usr/bin/env bash
 
+SESSION=$1
+PANE=$2
+WINDOW=$3
+MODE=$4
+
+# DEBUG
 # echo "SESSION: $SESSION"
 # echo "WINDOW: $WINDOW"
 # echo "PANE: $PANE"
+# echo "MODE: $MODE"
+
 
 if [ -z "$SESSION" ] || [ -z "$PANE" ] || [ -z "$WINDOW" ]; then
     echo "Not in tmux"
@@ -33,12 +41,12 @@ if [ -n "$selected_option" ]; then
     commit_type=$(echo "$selected_option" | sed 's/: .*/:/' )
     read -p "Enter commit message: " commit_message
 
-    tmux send-keys -t "$SESION:$WINDOW.$PANE" "$commit_type$commit_message"
+    if [ 'message' == "$MODE" ]; then
+        tmux send-keys -t "$SESION:$WINDOW.$PANE" "$commit_type $commit_message"
+
+    elif [ 'full' == "$MODE" ]; then
+        tmux send-keys -t "$SESION:$WINDOW.$PANE" "git commit -m '$commit_type $commit_message'"
+    fi
 else
     echo "no option selected."
 fi
-
-
-
-
-
