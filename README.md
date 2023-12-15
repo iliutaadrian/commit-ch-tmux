@@ -49,10 +49,13 @@ run '~/.tmux/plugins/tpm/tpm'
 Choose the appropriate commit type, scope, and provide a meaningful subject.
 Optionally add a body or footer for additional details.
 Press Enter to complete the commit message.
-### Press <C-g> within tmux to open the selector for single message.
+
+### Press \<C-g\> within tmux to open the selector for single message.
+
 ![Screenshot 2023-12-15 at 20 36 32](https://github.com/iliutaadrian/commit-ch-tmux/assets/11472785/d01d36ad-bf29-4f40-8faa-388f64884e55)
 
-### Press <C-G> within tmux to open the selector for full commit command.
+### Press \<C-G\> within tmux to open the selector for full commit command.
+
 ![Screenshot 2023-12-15 at 20 37 00](https://github.com/iliutaadrian/commit-ch-tmux/assets/11472785/11d11b3c-d8ec-4c7d-98c6-ada1cda580f5)
 
 ## Contributions
