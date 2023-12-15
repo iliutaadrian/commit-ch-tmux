@@ -43,13 +43,17 @@ run '~/.tmux/plugins/tpm/tpm'
 ```
 
 ## Usage
-Press <C-g> within tmux to open the selector.
+![Screenshot 2023-12-15 at 20 35 32](https://github.com/iliutaadrian/commit-ch-tmux/assets/11472785/8a0674ba-bd17-4f8b-a3d2-bb5e09e3abc2)
+![Screenshot 2023-12-15 at 20 36 24](https://github.com/iliutaadrian/commit-ch-tmux/assets/11472785/a86e5190-afeb-420c-bf79-47b1888dcdab)
+
 Choose the appropriate commit type, scope, and provide a meaningful subject.
 Optionally add a body or footer for additional details.
-Press Enter to complete the commit message or Ctrl-M to continue with the message.
+Press Enter to complete the commit message.
+### Press <C-g> within tmux to open the selector for single message.
+![Screenshot 2023-12-15 at 20 36 32](https://github.com/iliutaadrian/commit-ch-tmux/assets/11472785/d01d36ad-bf29-4f40-8faa-388f64884e55)
 
-## Screenshots
-
+### Press <C-G> within tmux to open the selector for full commit command.
+![Screenshot 2023-12-15 at 20 37 00](https://github.com/iliutaadrian/commit-ch-tmux/assets/11472785/11d11b3c-d8ec-4c7d-98c6-ada1cda580f5)
 
 ## Contributions
 Feel free to fork and contribute to this project. If you encounter any issues or have suggestions for improvement, please open an issue on the GitHub repository.
